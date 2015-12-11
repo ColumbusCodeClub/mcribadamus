@@ -1,3 +1,6 @@
+[![Clojars Project](http://clojars.org/mcribadamus/latest-version.svg)](http://clojars.org/mcribadamus)
+
+
 # Examples
 Examples from 11/20's meeting...
 
