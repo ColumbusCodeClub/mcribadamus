@@ -1,21 +1,17 @@
 {% extends "base.html" %}
-{% block content %}
-  <div class="jumbotron">
-    <h1>Welcome to mcribadamus-app</h1>
-    <p>Time to start building your site!</p>
-    <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
-  </div>
 
-<div>
+{% block content %}
+ <div class="jumbotron">
+    <h1>Welcome to mcribadamus-app</h1>
+ </div>
+ <div>
     <ul>
     {% for sym in my-symbols %}
-        <li>{%(get sym :symbol)%}</li>
+        <li>{{sym.month}}
+            <a href="http://finance.yahoo.com/webservice/v1/symbols/{{sym.symbol}}16.CME/quote?format=json&view=detail">
+                {{sym.symbol}}</a></li>
     {% endfor %}
     </ul>
 </div>
-  <div class="row">
-    <div class="span12">
-    {{docs|markdown}}
-    </div>
-  </div>
+
 {% endblock %}
